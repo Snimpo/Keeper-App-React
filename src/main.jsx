@@ -7,23 +7,13 @@
 //5.Create a Note.jsx component to show a <div> element with a <h1> for a title and a <p> for content.
 //6. make sure that the final website is listed like the example shown here: https://w00gz.csb.app/
 
-
-
-
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
-import Note from './Note.jsx'
-import './index.css'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
-    <Header />
     <App />
-    <Note />
-    <Footer />
   </StrictMode>,
 )
