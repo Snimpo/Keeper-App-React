@@ -1,24 +1,19 @@
+import React from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import Note from "./Note.jsx";
 import "./App.css";
 function App() {
   return (
-    <>
-      <div className="wrapper">
+   
+      <div className="App">
+        <Header />
 
-        <header className="page-header"> 
-          <Header />
-        </header>
-        <div className="page-body">           
-          <Note />
-        </div>
-        
-        <footer className="page-footer">          
-          <Footer />
-        </footer>
+        <Note />
+
+        <Footer />
       </div>
-    </>
+    
   );
 }
 

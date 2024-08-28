@@ -1,0 +1,39 @@
+.App{
+ 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+  header{
+
+    background-color: yellow;
+  }
+
+  footer{
+    
+    text-align: center ;
+
+    margin-top: auto;
+    height: 50px;
+    background-color: yellow;
+}
+
+.note-body{
+    margin: 2%;
+    width: 260px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 12%;
+}
+
+.card-title{
+    
+
+    
+}
+  
+  
