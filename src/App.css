@@ -1,39 +1,35 @@
-.App{
- 
+.App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
-  
 }
 
-  header{
+header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    background-color: yellow;
-  }
+  font-family: "Amatic SC", sans-serif;
 
-  footer{
-    
-    text-align: center ;
+  padding-left: 5%;
+  font-size: larger;
 
-    margin-top: auto;
-    height: 50px;
-    background-color: yellow;
+  background-color: rgb(250, 188, 63);
 }
 
-.note-body{
-    margin: 2%;
-    width: 260px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 12%;
+footer {
+  text-align: center;
+
+  margin-top: auto;
+  height: 50px;
+  background-color: rgb(250, 188, 63);
 }
 
-.card-title{
-    
+.note-body {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    
+  margin: 2%;
+  width: 260px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: rgb(199, 37, 62);
+  border-radius: 12%;
 }
-  
-  
