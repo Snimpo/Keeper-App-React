@@ -1,3 +1,13 @@
+.add-note-button {
+  margin-right: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+
+
 .App {
   min-height: 100vh;
   display: flex;
