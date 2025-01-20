@@ -1,5 +1,6 @@
 {
   "name": "keeper-app",
+  "homepage": "https://snimpo.github.io/Keeper-App-React",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
