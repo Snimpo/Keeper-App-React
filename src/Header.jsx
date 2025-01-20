@@ -1,5 +1,5 @@
 import React from "react";
-function Header({onAddNote }) {
+function Header({onAddNote}) {
   return (
     //decided to use a header tag instead of a <h1>
     

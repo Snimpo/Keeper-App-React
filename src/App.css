@@ -1,45 +1,90 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This should push the button to the right */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Amatic SC", sans-serif;
+  padding-left: 5%;
+  font-size: larger;
+  background-color: rgb(250, 188, 63);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .add-note-button {
-  margin-right: auto;
+  margin-right: 5%; /* Optional: Adds some space to the right of the button */
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   background-color: inherit;
-}
-
-
-
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   font-family: "Amatic SC", sans-serif;
-
-  padding-left: 5%;
-  font-size: larger;
-
-  background-color: rgb(250, 188, 63);
+  font-weight: bold;
+  border-radius: 12%;
 }
 
-footer {
-  text-align: center;
-
-  margin-top: auto;
-  height: 50px;
-  background-color: rgb(250, 188, 63);
+.note-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+  z-index: 1000; /* Ensures the form is on top of other content */
 }
 
 .note-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-  margin: 2%;
-  width: 260px;
-  padding: 10px;
+  margin: 3%;
+  width: 250px; /* Increased width for more space */
+  padding: 20px; /* Increased padding for better spacing */
   border: 1px solid #ccc;
   background-color: rgb(199, 37, 62);
-  border-radius: 12%;
+  border-radius: 11%;
+  min-height: 300px;
+}
+
+.note-body input,
+.note-body textarea {
+  width: 90%;
+  margin-bottom: 10%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+.note-body textarea {
+  height: 150px; 
+  flex-grow: 1;/* Adjust this value to make the textarea larger by default */
+}
+
+.note-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.create-note-button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.create-note-button:hover {
+  background-color: #45a049;
 }
