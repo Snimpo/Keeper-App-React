@@ -38,12 +38,12 @@ function App() {
           <div className="note-body">
             <input
               type="text"
-              placeholder="Please add a title"
+              placeholder="Please add a title..."
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <textarea
-              placeholder="Here goes the body"
+              placeholder="Here goes the body..."
               value={body}
               onChange={(e) => setBody(e.target.value)}
             />
