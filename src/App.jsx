@@ -32,7 +32,7 @@ function App() {
   return (
     <div>
       <Header onAddNote={startAddingNote} />
-      <div className='container'>
+      
       {isAdding && (
         <div className="note-form-container">
           <div className="note-body">
@@ -53,7 +53,7 @@ function App() {
           </div>
         </div>
       )}
-      <div>
+      <div className='container'>
         {notes.map((note, index) => (
           <Note
             key={index}
@@ -64,7 +64,7 @@ function App() {
         ))}
       </div>
     </div>
-    </div>
+    
   );
 }
 
