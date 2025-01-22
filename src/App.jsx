@@ -5,12 +5,24 @@ import Footer from './Footer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-
-  //useState and hooks to dynamically handle the addition or removal of the cards
   const [notes, setNotes] = useState([]);
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
+  const [isAdding, setIsAdding] = useState(false);
 
-  const addNote = () => {
-    setNotes([...notes, {}]);
+  const startAddingNote = () => {
+    setIsAdding(true);
+  };
+
+  const createNote = () => {
+    if (title && body) {
+      setNotes([...notes, { title, body }]);
+      setTitle('');
+      setBody('');
+      setIsAdding(false);
+    } else {
+      alert('Please enter both title and body');
+    }
   };
 
   const removeNote = (index) => {
@@ -18,20 +30,41 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header onAddNote={addNote} />
-
-      <div className="Content" style={{ display: 'flex', flexDirection: 'row' }}>
+    <div>
+      <Header onAddNote={startAddingNote} />
+      
+      {isAdding && (
+        <div className="note-form-container">
+          <div className="note-body">
+            <input
+              type="text"
+              placeholder="Please add a title..."
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <textarea
+              placeholder="Here goes the body..."
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+            />
+            <button className="create-note-button" onClick={createNote}>
+              Create
+            </button>
+          </div>
+        </div>
+      )}
+      <div className='container'>
         {notes.map((note, index) => (
-          <Note key={index} onRemove={() => removeNote(index)} />
+          <Note
+            key={index}
+            title={note.title}
+            body={note.body}
+            onRemove={() => removeNote(index)}
+          />
         ))}
       </div>
-
-      
-      
-
-      <Footer />
     </div>
+    
   );
 }
 
