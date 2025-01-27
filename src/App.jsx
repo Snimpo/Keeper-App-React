@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Note from './Note';
-import Footer from './Footer';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -25,6 +23,12 @@ function App() {
     }
   };
 
+  const cancelAddingNote = () => {
+    setIsAdding(false);
+    setTitle('');
+    setBody('');
+  };
+
   const removeNote = (index) => {
     setNotes(notes.filter((_, i) => i !== index));
   };
@@ -36,6 +40,7 @@ function App() {
       {isAdding && (
         <div className="note-form-container">
           <div className="note-body">
+            <button className="cancel-button" onClick={cancelAddingNote}>Cancel</button>
             <input
               type="text"
               placeholder="Please add a title..."
@@ -47,9 +52,7 @@ function App() {
               value={body}
               onChange={(e) => setBody(e.target.value)}
             />
-            <button className="create-note-button" onClick={createNote}>
-              Create
-            </button>
+            <button className="create-note-button" onClick={createNote}>Create</button>
           </div>
         </div>
       )}
@@ -64,7 +67,6 @@ function App() {
         ))}
       </div>
     </div>
-    
   );
 }
 

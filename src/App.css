@@ -141,3 +141,30 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.note-form-container {
+  position: relative;
+}
+
+.note-form-container {
+  position: relative;
+}
+
+.note-body {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.cancel-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
