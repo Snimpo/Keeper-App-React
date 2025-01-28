@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import Header from './Header';
-import Note from './Note';
+import React, { useState } from "react";
+import Header from "./Header";
+import Note from "./Note";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
   const [isAdding, setIsAdding] = useState(false);
 
   const startAddingNote = () => {
@@ -15,18 +16,18 @@ function App() {
   const createNote = () => {
     if (title && body) {
       setNotes([...notes, { title, body }]);
-      setTitle('');
-      setBody('');
+      setTitle("");
+      setBody("");
       setIsAdding(false);
     } else {
-      alert('Please enter both title and body');
+      alert("Please enter both title and body");
     }
   };
 
   const cancelAddingNote = () => {
     setIsAdding(false);
-    setTitle('');
-    setBody('');
+    setTitle("");
+    setBody("");
   };
 
   const removeNote = (index) => {
@@ -36,11 +37,13 @@ function App() {
   return (
     <div>
       <Header onAddNote={startAddingNote} />
-      
+
       {isAdding && (
         <div className="note-form-container">
           <div className="note-body">
-            <button className="cancel-button" onClick={cancelAddingNote}>Cancel</button>
+            <button className="cancel-button" onClick={cancelAddingNote}>
+              &times;
+            </button>
             <input
               type="text"
               placeholder="Please add a title..."
@@ -52,11 +55,13 @@ function App() {
               value={body}
               onChange={(e) => setBody(e.target.value)}
             />
-            <button className="create-note-button" onClick={createNote}>Create</button>
+            <button className="create-note-button" onClick={createNote}>
+              Create
+            </button>
           </div>
         </div>
       )}
-      <div className='container'>
+      <div className="container">
         {notes.map((note, index) => (
           <Note
             key={index}
