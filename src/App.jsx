@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Note from "./Note";
+import Draggable from "react-draggable";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
@@ -61,14 +62,18 @@ function App() {
           </div>
         </div>
       )}
+
       <div className="container">
         {notes.map((note, index) => (
-          <Note
-            key={index}
-            title={note.title}
-            body={note.body}
-            onRemove={() => removeNote(index)}
-          />
+          <Draggable key={index}>
+            <div>
+              <Note
+                title={note.title}
+                body={note.body}
+                onRemove={() => removeNote(index)}
+              />
+            </div>
+          </Draggable>
         ))}
       </div>
     </div>
