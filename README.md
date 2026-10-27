@@ -2,6 +2,10 @@
 
 A Google Keep inspired notes application built with React and Vite.
 
+## Live Demo
+
+🔗 [https://your-github-pages-link.com](https://snimpo.github.io/Keeper-App-React/)
+
 ## Features
 
 - Create notes
